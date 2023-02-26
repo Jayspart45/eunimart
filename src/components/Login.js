@@ -17,7 +17,7 @@ export default function Login() {
     const emailInput = document.getElementById("email");
     const emailError = document.getElementById("emailError");
     const phonePattern = /^\d{10}$/;
-    const emailPattern = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/i;
 
     if (nameInput.value === "") {
       nameError.innerHTML = "Name is required";
