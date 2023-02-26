@@ -3,13 +3,17 @@ export default function Login() {
   const Navigate = useNavigate();
 
   const validateForm = (e) => {
+    // prevent the default validayion
     e.preventDefault();
+    // localstorage storing the data
     let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
     let phone = document.getElementById("phone").value;
     localStorage.setItem("name", name);
     localStorage.setItem("email", email);
     localStorage.setItem("phone", phone);
+
+    // Validation
     const nameInput = document.getElementById("name");
     const nameError = document.getElementById("nameError");
     const phoneInput = document.getElementById("phone");
